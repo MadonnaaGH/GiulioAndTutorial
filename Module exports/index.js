@@ -28,7 +28,7 @@ for (const file of eventsFiles) {
     client.on(event.name, (...args) => event.execute(...args))
 }
 
-client.on("message", message => {
+client.on("messageCreate", message => {
     const prefix = "!";
 
     if (!message.content.startsWith(prefix) || message.author.bot) return
